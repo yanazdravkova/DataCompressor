@@ -10,6 +10,7 @@
 #include "Tree.h"
 
 using namespace std;
+
 class CodingTable
 {
 private:

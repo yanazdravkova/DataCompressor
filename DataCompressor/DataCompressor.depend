@@ -1,27 +1,27 @@
 # depslib dependency file v1.0
-1561836494 source:d:\repos\datacompressor\datacompressor\codingtable.cpp
-	<iostream>
-	<CodingTable.h>
+1561837947 source:d:\repos\datacompressor\datacompressor\codingtable.cpp
+	"iostream"
+	"CodingTable.h"
 
-1561837244 source:d:\repos\datacompressor\datacompressor\compressor.cpp
-	<iostream>
-	<Compressor.h>
+1561838018 source:d:\repos\datacompressor\datacompressor\compressor.cpp
+	"iostream"
+	"Compressor.h"
 
-1561834927 source:d:\repos\datacompressor\datacompressor\main.cpp
-	<iostream>
-	<Tree.h>
-	<CodingTable.h>
-	<FrequencyTable.h>
-	<Compressor.h>
+1561837999 source:d:\repos\datacompressor\datacompressor\main.cpp
+	"iostream"
+	"Tree.h"
+	"CodingTable.h"
+	"Compressor.h"
+	"FrequencyTable.h"
 
-1561836379 source:d:\repos\datacompressor\datacompressor\frequencytable.cpp
-	<FrequencyTable.h>
-	<iostream>
-	<fstream>
+1561837893 source:d:\repos\datacompressor\datacompressor\frequencytable.cpp
+	"iostream"
+	"fstream"
+	"FrequencyTable.h"
 
-1561831789 d:\repos\datacompressor\datacompressor\frequencytable.h
-	<iostream>
-	<unordered_map>
+1561837874 d:\repos\datacompressor\datacompressor\frequencytable.h
+	"iostream"
+	"unordered_map"
 
 1561836452 source:d:\repos\datacompressor\datacompressor\tree.cpp
 	<tree.h>
@@ -32,21 +32,21 @@
 	<list>
 	<set>
 
-1561837786 d:\repos\datacompressor\datacompressor\tree.h
+1561837801 d:\repos\datacompressor\datacompressor\tree.h
 	"iostream"
 	"iomanip"
 	"fstream"
 	"list"
 	"FrequencyTable.h"
 
-1561834415 d:\repos\datacompressor\datacompressor\codingtable.h
-	<iostream>
-	<tree.h>
-	<string>
-	<fstream>
-	<unordered_map>
-	<set>
-	<list>
+1561838068 d:\repos\datacompressor\datacompressor\codingtable.h
+	"iostream"
+	"string"
+	"fstream"
+	"unordered_map"
+	"set"
+	"list"
+	"Tree.h"
 
 1561820576 source:d:\repos\datacompressor\datacompressor\commonfunctions.cpp
 	<Tree.h>
