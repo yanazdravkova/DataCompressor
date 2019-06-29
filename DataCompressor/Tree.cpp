@@ -11,14 +11,14 @@ bool sortBySecond(const Tree* a,const Tree* b)
     return (a->getRootData().second < b->getRootData().second);
 }
 
-Node* Tree::copy(Node* node)
+Node* Node::copy()
 {
-    if (node == nullptr)
+    if (this == nullptr)
     {
         return nullptr;
     }
 
-    return new Node(node->data, copy(node->left), copy(node->right));
+    return new Node(data, left->copy(), right->copy());
 }
 
 void Tree::erase(Node* node)

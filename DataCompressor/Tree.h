@@ -15,15 +15,14 @@ struct Node
     Node():data(), left(nullptr), right(nullptr) {}
     Node(const pair<char,int>& data, Node* left = nullptr, Node* right = nullptr)
         : data(data), left(left), right(right) {}
-
+    Node* copy();
 };
 
 class Tree
 {
     Node* root;
-    Node* copy(Node* node);
     void erase(Node* node);
-    Tree(Node* root): root(copy(root)) {}
+    Tree(Node* root): root(root->copy()) {}
     void enterHelp(istream& in, Node*& curr);
     pair<char,int> enterPair(istream& in) const;
 
@@ -37,8 +36,7 @@ public:
         std::swap(root, other.root);
     }
 
-    Tree(Tree const& other): root(copy(other.root)) {}
-    //Tree(FrequencyTable& frequencyTable);
+    Tree(Tree const& other): root(other.root->copy()) {}
     Tree createFromFrequencyTable(FrequencyTable& frequencyTable);
     Tree& operator=(Tree other);
 
