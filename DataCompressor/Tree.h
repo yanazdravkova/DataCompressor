@@ -57,7 +57,7 @@ public:
     Tree createFromFrequencyTable(FrequencyTable& frequencyTable);
 
     void print(ostream& out = cout,int currentHeight = 0) const;
-    void saveInFile(string fileName) const;
+    void saveInFile(string outputFileName) const;
 
     ///used program from seminars
     class Position

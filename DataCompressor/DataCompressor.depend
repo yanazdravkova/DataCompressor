@@ -1,0 +1,63 @@
+# depslib dependency file v1.0
+1561834426 source:d:\repos\datacompressor\datacompressor\codingtable.cpp
+	<iostream>
+	<CodingTable.h>
+
+1561834691 source:d:\repos\datacompressor\datacompressor\compressor.cpp
+	<iostream>
+	<Compressor.h>
+
+1561834927 source:d:\repos\datacompressor\datacompressor\main.cpp
+	<iostream>
+	<Tree.h>
+	<CodingTable.h>
+	<FrequencyTable.h>
+	<Compressor.h>
+
+1561831807 source:d:\repos\datacompressor\datacompressor\frequencytable.cpp
+	<FrequencyTable.h>
+	<iostream>
+	<fstream>
+
+1561831789 d:\repos\datacompressor\datacompressor\frequencytable.h
+	<iostream>
+	<unordered_map>
+
+1561831854 source:d:\repos\datacompressor\datacompressor\tree.cpp
+	<tree.h>
+	<iostream>
+	<fstream>
+	<iomanip>
+	<algorithm>
+	<list>
+	<set>
+
+1561831826 d:\repos\datacompressor\datacompressor\tree.h
+	<iostream>
+	<iomanip>
+	<fstream>
+	<list>
+	<FrequencyTable.h>
+
+1561834415 d:\repos\datacompressor\datacompressor\codingtable.h
+	<iostream>
+	<tree.h>
+	<string>
+	<fstream>
+	<unordered_map>
+	<set>
+	<list>
+
+1561820576 source:d:\repos\datacompressor\datacompressor\commonfunctions.cpp
+	<Tree.h>
+
+1561820614 d:\repos\datacompressor\datacompressor\commonfunctions.cpp
+	<Tree.h>
+	<tuple>
+
+1561834963 d:\repos\datacompressor\datacompressor\compressor.h
+	"iostream"
+	"FrequencyTable.h"
+	"Tree.h"
+	"CodingTable.h"
+

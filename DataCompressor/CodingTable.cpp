@@ -36,6 +36,16 @@ CodingTable::CodingTable(Tree& tree)
     }
 }
 
+unordered_map<char, string> CodingTable::getData() const
+{
+    return data;
+}
+
+bool CodingTable::isEmpty() const
+{
+    return data.empty();
+}
+
 void CodingTable::print() const
 {
     for(tuple<char, string> t : data)

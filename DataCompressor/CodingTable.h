@@ -21,6 +21,9 @@ public:
     CodingTable(unordered_map<char, string> _data): data(_data) {}
     CodingTable(Tree& tree);
 
+    unordered_map<char, string> getData() const;
+
+    bool isEmpty() const;
     void print() const;
 };
 

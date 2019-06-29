@@ -9,10 +9,10 @@ unordered_map<char, int> FrequencyTable::getData() const
 {
     return data;
 }
-void FrequencyTable::fillInFromFile(string inputFile)
+void FrequencyTable::fillInFromFile(string inputFileName)
 {
     ifstream inputFileStream;
-    inputFileStream.open(inputFile, ios::in);
+    inputFileStream.open(inputFileName, ios::in);
 
     while(true)
     {

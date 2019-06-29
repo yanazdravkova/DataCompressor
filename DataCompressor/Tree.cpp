@@ -186,10 +186,10 @@ void Tree::print(ostream& outputStream, int currentHeight) const
     }
 }
 
-void Tree::saveInFile(string fileName) const
+void Tree::saveInFile(string outputFileName) const
 {
     ofstream fout;
-    fout.open(fileName, ios::out);//изтрива всичко друго, което е имало преди във файла
+    fout.open(outputFileName, ios::out);//изтрива всичко друго, което е имало преди във файла
     print(fout,0);
     fout.close();
 }

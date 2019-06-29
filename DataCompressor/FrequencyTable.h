@@ -8,13 +8,14 @@ class FrequencyTable
 {
 private:
     unordered_map<char, int> data;
+
 public:
     FrequencyTable():data() {}
     FrequencyTable(unordered_map<char, int> _data): data(_data) {}
 
     unordered_map<char, int> getData() const;
 
-    void fillInFromFile(string inputFile);
+    void fillInFromFile(string inputFileName);
 
     bool isEmpty() const;
     void print();
