@@ -48,12 +48,13 @@ public:
     int getRootNumber() const;
     void getLeaves(list<char>& leaves) const;
 
+
     bool isEmpty()const;
     bool isCharacterMember(const char c) const;
 
-
+    Tree*& findTreeWithMinRootNumber(list<Tree*>& nodes);
+    list<Tree*> createForestFromFrequencyTable(FrequencyTable& frequencyTable) const;
     Tree createFromFrequencyTable(FrequencyTable& frequencyTable);
-    Tree*& findMinNode(list<Tree*>& nodes);
 
     void print(ostream& out = cout,int currentHeight = 0) const;
     void saveInFile(string fileName) const;
