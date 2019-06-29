@@ -63,6 +63,7 @@ public:
     ///used program from seminars
     class Position
     {
+    private:
         Node*& p;
 
     public:
@@ -92,6 +93,7 @@ public:
         {
             return Position(p->right);
         }
+
         bool isLeaf()
         {
             return !(left()) && !(right());

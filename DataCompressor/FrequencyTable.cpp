@@ -46,5 +46,6 @@ void FrequencyTable::print()
     {
         cout<<std::get<0>(t)<<" "<<std::get<1>(t)<<endl;
     }
+
     cout<<endl;
 }

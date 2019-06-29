@@ -190,7 +190,6 @@ void Tree::print(ostream& outputStream, int currentHeight) const
         outputStream<<setw(5*currentHeight)<<root->getCharacter()<<root->getNumber()<<endl;
         getLeftSubtree().print(outputStream, currentHeight + 1);
     }
-
 }
 
 void Tree::saveInFile(string outputFileName) const
