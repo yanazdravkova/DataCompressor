@@ -20,6 +20,11 @@ Compressor::Compressor(string inputFileName)
     codingTable->print();
 }
 
+Compressor::~Compressor()
+{
+    delete codingTable;
+}
+
 string Compressor::calculateCodeForCharacter(char c)
 {
     if(codingTable->isEmpty())

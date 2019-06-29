@@ -18,6 +18,7 @@ private:
 public:
     Compressor():  inputFileName(""), codingTable(), compressedCode(""){}
     Compressor(string inputFileName);
+    ~Compressor();
 
     string calculateCodeForCharacter(char c);
     string calculateCodmpressedCode();
