@@ -1,10 +1,11 @@
 # DataCompressor
 
 Data Compression based on Huffman Algorithm 
+*for Clean Code Course FMI project purposes
 
 Description of the project could be found [here](https://github.com/yanazdravkova/DataCompressor/blob/master/README.md)
 
-This project is part of another Course Project for Data Structure and Programming Practicum FMI [here](https://github.com/yanazdravkova/Huffman-Algorithm)
+The current repository contains the refactored Compression Part from [the hole Huffman Algorithm Implementation](https://github.com/yanazdravkova/Huffman-Algorithm)
 
-The Compression part of the algorithm is refactored in the current repository for Clean Code Course FMI project purposes
+
 
