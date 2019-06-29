@@ -1,13 +1,13 @@
 #ifndef _CODING_TABLE_H_
 #define _CODING_TABLE_H_
 
-#include <iostream>
-#include<tree.h>
-#include<string>
-#include<fstream>
-#include<unordered_map>
-#include<set>
-#include<list>
+#include "iostream"
+#include "string"
+#include "fstream"
+#include "unordered_map"
+#include "set"
+#include "list"
+#include "Tree.h"
 
 using namespace std;
 class CodingTable

@@ -1,7 +1,6 @@
-
-#include <FrequencyTable.h>
-#include <iostream>
-#include <fstream>
+#include "iostream"
+#include "fstream"
+#include "FrequencyTable.h"
 
 using namespace std;
 

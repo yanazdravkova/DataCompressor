@@ -1,11 +1,13 @@
-#include<tree.h>
-#include<iostream>
-#include<fstream>
-#include<iomanip>
-#include<algorithm>
-#include<list>
-#include<set>
+#include "algorithm"
+#include "iostream"
+#include "iomanip"
+#include "fstream"
+#include "list"
+#include "set"
+#include "Tree.h>
+
 using namespace std;
+
 bool sortBySecond(const Tree* firstTree,const Tree* secondTree)
 {
     int firstRootNumber = firstTree->getRootNumber();
@@ -49,7 +51,7 @@ void Tree::eraseNode(Node* node)
     }
 }
 
-Tree::Tree(const pair<char,int>& data, Tree left, Tree right)
+Tree::Tree(const pair<char, int>& data, Tree left, Tree right)
 {
     root = new Node(data);
     swap(root->left, left.root);
@@ -193,7 +195,7 @@ void Tree::print(ostream& outputStream, int currentHeight) const
 void Tree::saveInFile(string outputFileName) const
 {
     ofstream fout;
-    fout.open(outputFileName, ios::out);//изтрива всичко друго, което е имало преди във файла
+    fout.open(outputFileName, ios::out);
     print(fout,0);
     fout.close();
 }

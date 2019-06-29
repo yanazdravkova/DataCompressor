@@ -1,7 +1,9 @@
 #ifndef _FREQUENCY_TABLE_H_
 #define _FREQUENCY_TABLE_H_
-#include<iostream>
-#include<unordered_map>
+
+#include "iostream"
+#include "unordered_map"
+
 using namespace std;
 
 class FrequencyTable

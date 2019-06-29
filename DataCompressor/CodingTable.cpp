@@ -1,5 +1,6 @@
-#include<iostream>
-#include<CodingTable.h>
+#include "iostream"
+#include "CodingTable.h"
+
 using namespace std;
 
 string CodingTable::calculateBinaryForChar(const char c, const Tree& tree) const

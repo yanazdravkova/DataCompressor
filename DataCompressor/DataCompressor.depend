@@ -3,7 +3,7 @@
 	<iostream>
 	<CodingTable.h>
 
-1561836355 source:d:\repos\datacompressor\datacompressor\compressor.cpp
+1561837244 source:d:\repos\datacompressor\datacompressor\compressor.cpp
 	<iostream>
 	<Compressor.h>
 
@@ -32,12 +32,12 @@
 	<list>
 	<set>
 
-1561831826 d:\repos\datacompressor\datacompressor\tree.h
-	<iostream>
-	<iomanip>
-	<fstream>
-	<list>
-	<FrequencyTable.h>
+1561837786 d:\repos\datacompressor\datacompressor\tree.h
+	"iostream"
+	"iomanip"
+	"fstream"
+	"list"
+	"FrequencyTable.h"
 
 1561834415 d:\repos\datacompressor\datacompressor\codingtable.h
 	<iostream>

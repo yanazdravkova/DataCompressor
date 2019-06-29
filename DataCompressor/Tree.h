@@ -1,10 +1,12 @@
 #ifndef _TREE_HUFFMAN_H_
 #define _TREE_HUFFMAN_H_
-#include<iostream>
-#include<iomanip>
-#include<fstream>
-#include<list>
-#include<FrequencyTable.h>
+
+#include "iostream"
+#include "iomanip"
+#include "fstream"
+#include "list"
+#include "FrequencyTable.h"
+
 using namespace std;
 
 struct Node
