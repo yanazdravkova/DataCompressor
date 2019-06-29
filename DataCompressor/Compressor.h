@@ -1,3 +1,6 @@
+#ifndef _COMPRESSOR_H_
+#define _COMPRESSOR_H_
+
 #include "iostream"
 #include "FrequencyTable.h"
 #include "Tree.h"
@@ -11,6 +14,7 @@ private:
     string inputFileName;
     CodingTable* codingTable;
     string compressedCode;
+
 public:
     Compressor():  inputFileName(""), codingTable(), compressedCode(""){}
     Compressor(string inputFileName);
@@ -20,3 +24,4 @@ public:
     void saveInFile(string outputFileName) const;
 };
 
+#endif // _COMPRESSOR_H_

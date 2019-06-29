@@ -136,6 +136,7 @@ Tree*& Tree::findTreeWithMinRootNumber(list<Tree*>& nodes)
     nodes.sort(sortBySecond);
     return nodes.front();
 }
+
 list<Tree*> Tree::createForestFromFrequencyTable(FrequencyTable& frequencyTable) const
 {
     list<Tree*> forest;

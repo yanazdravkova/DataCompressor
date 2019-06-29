@@ -23,4 +23,5 @@ public:
     void print();
 
 };
+
 #endif // _FREQUENCY_TABLE_H_

@@ -97,6 +97,7 @@ public:
             return !(left()) && !(right());
         }
     };
+
     Position getRoot()
     {
         return Position(root);

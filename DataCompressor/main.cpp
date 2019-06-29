@@ -3,6 +3,7 @@
 #include "CodingTable.h"
 #include "Compressor.h"
 #include "FrequencyTable.h"
+
 using namespace std;
 
 int main()
