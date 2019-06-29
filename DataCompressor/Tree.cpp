@@ -32,6 +32,7 @@ void Tree::erase(Node* node)
     erase(node->right);
     delete node;
 }
+
 Tree::Tree(const pair<char,int>& data, Tree left, Tree right)
 {
     root = new Node(data);
@@ -47,7 +48,7 @@ Tree::~Tree()
 {
     erase(root);
 }
-bool Tree::empty()const
+bool Tree::isEmpty()const
 {
     return root == nullptr;
 }
@@ -103,7 +104,7 @@ Tree Tree::createFromFrequencyTable(FrequencyTable& frequencyTable)
 
 void Tree::prettyPrint(ostream& out, int currentHeight) const
 {
-    if(empty())
+    if(isEmpty())
         return;
     right().prettyPrint(out, currentHeight + 1);
     out<<setw(5*currentHeight)<<root->data.first<<root->data.second<<endl;
@@ -143,7 +144,7 @@ void Tree::enter(istream& in)
 }
 bool Tree::isMember(const char c) const
 {
-    if(empty())
+    if(isEmpty())
         return false;
     if(root->data.first == c)
         return true;

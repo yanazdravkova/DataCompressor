@@ -41,7 +41,7 @@ public:
     Tree& operator=(Tree other);
 
     ~Tree();
-    bool empty()const;
+    bool isEmpty()const;
 
     Tree left() const;
 
