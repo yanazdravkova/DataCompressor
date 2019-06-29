@@ -48,8 +48,12 @@ bool CodingTable::isEmpty() const
 
 void CodingTable::print() const
 {
+    cout<<endl;
+
     for(tuple<char, string> t : data)
     {
-        cout<<std::get<0>(t)<<" "<<std::get<1>(t)<<endl;
+        cout<<get<0>(t)<<" "<<get<1>(t)<<endl;
     }
+
+    cout<<endl;
 }

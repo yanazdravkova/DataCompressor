@@ -5,15 +5,37 @@ using namespace std;
 
 Compressor::Compressor(string inputFileName)
 {
+    //prints left for demonstration purposes
     this->inputFileName = inputFileName;
     FrequencyTable* frequencyTable = new FrequencyTable;
     frequencyTable->fillInFromFile(inputFileName);
-    //frequencyTable->print();
+    frequencyTable->print();
     Tree* tree = new Tree();
     Tree filledTree = (tree->createFromFrequencyTable(*frequencyTable));
-    //filledTree.print();
+    filledTree.print();
     codingTable = new CodingTable(filledTree);
-    //codingTable->print();
+    codingTable->print();
+}
+
+string Compressor::calculateCodeForCharacter(char c)
+{
+    if(codingTable->isEmpty())
+    {
+        cerr<<"Empty code table\n";
+        return "";
+    }
+    else
+    {
+        for(pair<char,string> p : codingTable->getData())
+        {
+            if(p.first == c)
+            {
+                string characterCode = p.second;
+                return characterCode;
+            }
+            else {} //continue iteration
+        }
+    }
 }
 
 string Compressor::calculateCodmpressedCode()
@@ -38,13 +60,7 @@ string Compressor::calculateCodmpressedCode()
             }
             else
             {
-                for(pair<char,string> p : codingTable->getData())
-                {
-                    if(p.first == c)
-                    {
-                        compressedCode += p.second;
-                    }
-                }
+                compressedCode += calculateCodeForCharacter(c);
             }
         }
 
@@ -63,7 +79,7 @@ void Compressor::saveInFile(string outputFileName) const
     else
     {
         ofstream outputFileStream;
-        outputFileStream.open(outputFileName, ios::out | ios::app);
+        outputFileStream.open(outputFileName, ios::out );
         outputFileStream<<compressedCode ;
         outputFileStream.close();
     }

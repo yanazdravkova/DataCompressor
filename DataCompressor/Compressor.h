@@ -15,6 +15,7 @@ public:
     Compressor():  inputFileName(""), codingTable(), compressedCode(""){}
     Compressor(string inputFileName);
 
+    string calculateCodeForCharacter(char c);
     string calculateCodmpressedCode();
     void saveInFile(string outputFileName) const;
 };

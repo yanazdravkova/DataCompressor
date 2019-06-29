@@ -178,12 +178,14 @@ void Tree::print(ostream& outputStream, int currentHeight) const
     {
         return;
     }
+
     else
     {
         getRightSubtree().print(outputStream, currentHeight + 1);
         outputStream<<setw(5*currentHeight)<<root->getCharacter()<<root->getNumber()<<endl;
         getLeftSubtree().print(outputStream, currentHeight + 1);
     }
+
 }
 
 void Tree::saveInFile(string outputFileName) const
