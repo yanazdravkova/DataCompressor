@@ -5,17 +5,22 @@ using namespace std;
 
 string CodingTable::calculateBinaryForChar(const char c, const Tree& tree) const
 {
+    string result;
+
     if(tree.getLeftSubtree().isCharacterMember(c))
     {
-        return "0" + calculateBinaryForChar(c, tree.getLeftSubtree());
+        result = "0" + calculateBinaryForChar(c, tree.getLeftSubtree());
+        return result;
     }
     else if(tree.getRightSubtree().isCharacterMember(c))
     {
-        return "1" + calculateBinaryForChar(c, tree.getRightSubtree());
+        result = "1" + calculateBinaryForChar(c, tree.getRightSubtree());
+        return result;
     }
     else
     {
-        return "";
+        result = "";
+        return result;
     }
 }
 
