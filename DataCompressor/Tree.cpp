@@ -21,6 +21,18 @@ Node* Node::copy()
     return new Node(data, left->copy(), right->copy());
 }
 
+char Node::getNodeChar()
+{
+    char result = data.first;
+    return result;
+}
+
+int Node::getNodeNumber()
+{
+    int result = data.second;
+    return result;
+}
+
 void Tree::erase(Node* node)
 {
     if (node == nullptr)

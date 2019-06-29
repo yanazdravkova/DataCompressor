@@ -16,6 +16,8 @@ struct Node
     Node(const pair<char,int>& data, Node* left = nullptr, Node* right = nullptr)
         : data(data), left(left), right(right) {}
     Node* copy();
+    char getNodeChar();
+    int getNodeNumber();
 };
 
 class Tree
