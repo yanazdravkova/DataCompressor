@@ -164,16 +164,19 @@ void Tree::save(string fname) const
 
 void Tree::getLeaves(list<char>& leaves) const
 {
+    cout<<root->data.second<<endl;
     if(root == nullptr)
     {
         return;
     }
-    else if(root->left == nullptr && root->right == nullptr)
+    else if(root->data.first == ' ')
+    {
+        right().getLeaves(leaves);
+        left().getLeaves(leaves);
+    }
+    else
     {
         leaves.push_back(root->data.first);
-        cout<<"leaves size"<<leaves.size();
         return;
     }
-    left().getLeaves(leaves);
-    right().getLeaves(leaves);
 }
