@@ -1,4 +1,3 @@
-
 #ifndef _FREQUENCY_TABLE_H_
 #define _FREQUENCY_TABLE_H_
 #include<iostream>
@@ -15,8 +14,9 @@ public:
 
     unordered_map<char, int> getData() const;
 
-    bool isEmpty() const;
     void fillInFromFile(string inputFile);
+
+    bool isEmpty() const;
     void print();
 
 };

@@ -11,20 +11,33 @@ unordered_map<char, int> FrequencyTable::getData() const
 }
 void FrequencyTable::fillInFromFile(string inputFile)
 {
-    ifstream fin;
-    char c;
-    fin.open(inputFile, ios::in);
+    ifstream inputFileStream;
+    inputFileStream.open(inputFile, ios::in);
+
     while(true)
     {
-        fin.get(c);
-        if(fin.eof())
-            break;
-        if(data.find(c) == data.end())
-            data[c] = 1;
+        char c;
+        inputFileStream.get(c);
+        if(inputFileStream.eof())
+            {
+                break;
+            }
+        else if(data.find(c) == data.end())
+            {
+                data[c] = 1;
+            }
         else
-            data[c]++;
+            {
+                data[c]++;
+            }
     }
-    fin.close();
+
+    inputFileStream.close();
+}
+
+bool FrequencyTable::isEmpty() const
+{
+    return data.empty();
 }
 
 void FrequencyTable::print()
@@ -34,10 +47,3 @@ void FrequencyTable::print()
         cout<<std::get<0>(t)<<" "<<std::get<1>(t)<<endl;
     }
 }
-
-bool FrequencyTable::isEmpty() const
-{
-    return data.empty();
-}
-
-
