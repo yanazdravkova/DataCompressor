@@ -8,12 +8,12 @@ Compressor::Compressor(string inputFileName)
     //prints left for demonstration purposes
     this->inputFileName = inputFileName;
 
-    FrequencyTable* frequencyTable = new FrequencyTable;
-    frequencyTable->fillInFromFile(inputFileName);
-    frequencyTable->print();
+    FrequencyTable frequencyTable ;
+    frequencyTable.fillInFromFile(inputFileName);
+    frequencyTable.print();
 
-    Tree* tree = new Tree();
-    Tree filledTree = (tree->createFromFrequencyTable(*frequencyTable));
+    Tree tree = Tree();
+    Tree filledTree = (tree.createFromFrequencyTable(frequencyTable));
     filledTree.print();
 
     codingTable = new CodingTable(filledTree);
