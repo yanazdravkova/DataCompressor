@@ -50,7 +50,6 @@ public:
     int getRootNumber() const;
     void getLeaves(list<char>& leaves) const;
 
-
     bool isEmpty()const;
     bool isCharacterMember(const char c) const;
 
