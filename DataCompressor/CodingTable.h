@@ -15,6 +15,7 @@ class CodingTable
 private:
     unordered_map<char, string> data;
     string calculateBinaryForChar(const char c, const Tree& start) const;
+
 public:
     CodingTable():data() {};
     CodingTable(unordered_map<char, string> _data): data(_data) {}

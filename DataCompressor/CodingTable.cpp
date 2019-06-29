@@ -17,19 +17,25 @@ string CodingTable::calculateBinaryForChar(const char c, const Tree& tree) const
         return "";
     }
 }
+
 CodingTable::CodingTable(Tree& tree)
 {
     if(tree.isEmpty())
     {
         return;
     }
-    list<char> leaves;
-    tree.getLeaves(leaves);
-    for(char character : leaves)
+    else
     {
-        data.emplace(character,calculateBinaryForChar(character, tree));
+        list<char> leaves;
+        tree.getLeaves(leaves);
+
+        for(char character : leaves)
+        {
+            data.emplace(character,calculateBinaryForChar(character, tree));
+        }
     }
 }
+
 void CodingTable::print() const
 {
     for(tuple<char, string> t : data)
