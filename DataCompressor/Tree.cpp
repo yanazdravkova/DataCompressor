@@ -6,9 +6,11 @@
 #include<list>
 #include<set>
 using namespace std;
-bool sortBySecond(const Tree* a,const Tree* b)
+bool sortBySecond(const Tree* firstTree,const Tree* secondTree)
 {
-    return (a->getRootData().second < b->getRootData().second);
+    int firstRootNumber = firstTree->getRootNumber();
+    const int secondRootNumber = secondTree->getRootNumber();
+    return (firstRootNumber < secondRootNumber);
 }
 
 Node* Node::copy()
@@ -21,27 +23,27 @@ Node* Node::copy()
     return new Node(data, left->copy(), right->copy());
 }
 
-char Node::getNodeChar()
+char Node::getCharacter()
 {
     char result = data.first;
     return result;
 }
 
-int Node::getNodeNumber()
+int Node::getNumber()
 {
     int result = data.second;
     return result;
 }
 
-void Tree::erase(Node* node)
+void Tree::eraseNode(Node* node)
 {
     if (node == nullptr)
     {
         return;
     }
 
-    erase(node->left);
-    erase(node->right);
+    eraseNode(node->left);
+    eraseNode(node->right);
     delete node;
 }
 
@@ -58,18 +60,18 @@ Tree& Tree::operator=(Tree other)
 }
 Tree::~Tree()
 {
-    erase(root);
+    eraseNode(root);
 }
 bool Tree::isEmpty()const
 {
     return root == nullptr;
 }
-Tree Tree::left() const
+Tree Tree::getLeftSubtree() const
 {
     return Tree(root->left);
 }
 
-Tree Tree::right() const
+Tree Tree::getRightSubtree() const
 {
     return Tree(root->right);
 }
@@ -82,9 +84,6 @@ Tree*& Tree::findMinNode(list<Tree*>& nodes)
 
 Tree Tree::createFromFrequencyTable(FrequencyTable& frequencyTable)
 {
-    //стъпка 2 от построяване на дърво на Хъфман от описанието
-    //създаваме n дървета от по един възел, който съдържа наредена двойка и ги записваме в списък,
-    //като той е сортиран във низходяш
     if(frequencyTable.isEmpty())
     {
         cerr<<"Empty frequency table\n";
@@ -100,96 +99,82 @@ Tree Tree::createFromFrequencyTable(FrequencyTable& frequencyTable)
 
     while(nodes.size() > 1)
     {
-        Tree* fst = findMinNode(nodes);
-        nodes.pop_front();//премахваме fst от списъка
-        Tree* snd = findMinNode(nodes);
-        nodes.pop_front();//премахваме snd от списъка
-        Tree* res = new Tree(make_pair(' ',fst->getRootData().second + snd->getRootData().second), *fst, *snd);//строим ново дърво с поддървета 2те най-малки досега
-        nodes.push_front(res);
+        Tree* first = findMinNode(nodes);
+        nodes.pop_front();
+        Tree* second = findMinNode(nodes);
+        nodes.pop_front();
+        Tree* firstAndSecondCombined = new Tree(make_pair(' ',first->getRootNumber() + second->getRootNumber()), *first, *second);//строим ново дърво с поддървета 2те най-малки досега
+        nodes.push_front(firstAndSecondCombined);
     }
-    //има само 1 възел в списъка и това е нашият корен
 
     Tree resultTree = *(nodes.front());
     nodes.pop_front();
     return resultTree;
 }
 
-void Tree::prettyPrint(ostream& out, int currentHeight) const
+void Tree::print(ostream& outputStream, int currentHeight) const
 {
     if(isEmpty())
+    {
         return;
-    right().prettyPrint(out, currentHeight + 1);
-    out<<setw(5*currentHeight)<<root->data.first<<root->data.second<<endl;
-    left().prettyPrint(out, currentHeight + 1);
-}
-pair<char,int> Tree::enterPair(istream& in) const
-{
-    char c;
-    int i;
-    cout<<"\nsymbol: ";
-    in>>c;
-    if(c == '*')
-        c = ' ';
-    cout<<"\nsymbol frequency: ";
-    in>>i;
-    return make_pair(c,i);
-}
-void Tree::enterHelp(istream& in, Node*& curr)
-{
-    int answer;
-    cout<<"stop 0/1 ";
-    cin>>answer;
-    if(answer == 1)
-        return;
-    pair<char,int> p = enterPair(in);
-    cout<<p.first<<":"<<p.second<<"\n";
-    curr = new Node(p);
-    cout<<"\nleft of "<<curr->data.first<<curr->data.second<<" -> \n";
-    enterHelp(in, curr->left);
-    cout<<"\nright of "<<curr->data.first<<curr->data.second<<" -> \n";
-    enterHelp(in, curr->right);
-}
-void Tree::enter(istream& in)
-{
-    cout<<"for nodes without symbols, set * as their symbol\n";
-    enterHelp(in, root);
-}
-bool Tree::isMember(const char c) const
-{
-    if(isEmpty())
-        return false;
-    if(root->data.first == c)
-        return true;
-    return left().isMember(c) || right().isMember(c);
-}
-pair<char, int> Tree::getRootData() const
-{
-    return root->data;
+    }
+    else
+    {
+        getRightSubtree().print(outputStream, currentHeight + 1);
+        outputStream<<setw(5*currentHeight)<<root->getCharacter()<<root->getNumber()<<endl;
+        getLeftSubtree().print(outputStream, currentHeight + 1);
+    }
 }
 
-void Tree::save(string fname) const
+bool Tree::isCharacterMember(const char c) const
+{
+    if(isEmpty())
+        {
+            return false;
+        }
+    else if(root->getCharacter() == c)
+        {
+            return true;
+        }
+    else
+    {
+        bool result = getLeftSubtree().isCharacterMember(c) || getRightSubtree().isCharacterMember(c);
+        return result;
+    }
+}
+
+char Tree::getRootCharacter() const
+{
+    char rootCharacter = root->getCharacter();
+    return rootCharacter;
+}
+int Tree::getRootNumber() const
+{
+    int rootNumber = root->getNumber();
+    return rootNumber;
+}
+void Tree::saveInFile(string fileName) const
 {
     ofstream fout;
-    fout.open(fname, ios::out);//изтрива всичко друго, което е имало преди във файла
-    prettyPrint(fout,0);
+    fout.open(fileName, ios::out);//изтрива всичко друго, което е имало преди във файла
+    print(fout,0);
     fout.close();
 }
 
 void Tree::getLeaves(list<char>& leaves) const
 {
-    cout<<root->data.second<<endl;
     if(root == nullptr)
     {
         return;
     }
-    else if(root->data.first == ' ')
+    else if(root->getCharacter() == ' ')
     {
-        right().getLeaves(leaves);
-        left().getLeaves(leaves);
+        getRightSubtree().getLeaves(leaves);
+        getLeftSubtree().getLeaves(leaves);
     }
     else
     {
-        leaves.push_back(root->data.first);
+        leaves.push_back(root->getCharacter());
         return;
     }
 }

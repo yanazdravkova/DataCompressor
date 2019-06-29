@@ -12,52 +12,53 @@ struct Node
     pair<char,int> data;
     Node* left;
     Node* right;
+
     Node():data(), left(nullptr), right(nullptr) {}
     Node(const pair<char,int>& data, Node* left = nullptr, Node* right = nullptr)
         : data(data), left(left), right(right) {}
+
+    char getCharacter();
+    int getNumber();
+
     Node* copy();
-    char getNodeChar();
-    int getNodeNumber();
 };
 
 class Tree
 {
+private:
     Node* root;
-    void erase(Node* node);
     Tree(Node* root): root(root->copy()) {}
-    void enterHelp(istream& in, Node*& curr);
-    pair<char,int> enterPair(istream& in) const;
+    void eraseNode(Node* node);
 
 public:
     Tree(): root(nullptr) {}
-
     Tree(const pair<char,int>& data, Tree left, Tree right);
-
     Tree(Tree&& other) noexcept: Tree()
     {
         std::swap(root, other.root);
     }
-
     Tree(Tree const& other): root(other.root->copy()) {}
-    Tree createFromFrequencyTable(FrequencyTable& frequencyTable);
+
     Tree& operator=(Tree other);
-
     ~Tree();
-    bool isEmpty()const;
 
-    Tree left() const;
-
-    Tree right() const;
-
-    Tree*& findMinNode(list<Tree*>& nodes);
-    void prettyPrint(ostream& out = cout,int currentHeight = 0) const;
-    void enter(istream& in);
-    bool isMember(const char c) const;
-    pair<char, int> getRootData() const;
-    void save(string fname) const;
-
+    Tree getLeftSubtree() const;
+    Tree getRightSubtree() const;
+    char getRootCharacter() const;
+    int getRootNumber() const;
     void getLeaves(list<char>& leaves) const;
-    ///използвана програма от семинари
+
+    bool isEmpty()const;
+    bool isCharacterMember(const char c) const;
+
+
+    Tree createFromFrequencyTable(FrequencyTable& frequencyTable);
+    Tree*& findMinNode(list<Tree*>& nodes);
+
+    void print(ostream& out = cout,int currentHeight = 0) const;
+    void saveInFile(string fileName) const;
+
+    ///used program from seminars
     class Position
     {
         Node*& p;
