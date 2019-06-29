@@ -8,6 +8,7 @@ unordered_map<char, int> FrequencyTable::getData() const
 {
     return data;
 }
+
 void FrequencyTable::fillInFromFile(string inputFileName)
 {
     ifstream inputFileStream;
