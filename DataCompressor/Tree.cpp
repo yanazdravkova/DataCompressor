@@ -41,10 +41,12 @@ void Tree::eraseNode(Node* node)
     {
         return;
     }
-
-    eraseNode(node->left);
-    eraseNode(node->right);
-    delete node;
+    else
+    {
+        eraseNode(node->left);
+        eraseNode(node->right);
+        delete node;
+    }
 }
 
 Tree::Tree(const pair<char,int>& data, Tree left, Tree right)
