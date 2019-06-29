@@ -52,13 +52,13 @@ void Tree::eraseNode(Node* node)
 Tree::Tree(const pair<char,int>& data, Tree left, Tree right)
 {
     root = new Node(data);
-    std::swap(root->left, left.root);
-    std::swap(root->right, right.root);
+    swap(root->left, left.root);
+    swap(root->right, right.root);
 }
 
 Tree& Tree::operator=(Tree other)
 {
-    std::swap(root, other.root);
+    swap(root, other.root);
     return *this;
 }
 
