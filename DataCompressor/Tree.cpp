@@ -166,8 +166,8 @@ Tree Tree::createFromFrequencyTable(FrequencyTable& frequencyTable)
             forest.push_front(firstAndSecondCombined);
         }
 
-        Tree resultTree = *(nodes.front());
-        nodes.pop_front();
+        Tree resultTree = *(forest.front());
+        forest.pop_front();
         return resultTree;
     }
 }
