@@ -7,4 +7,10 @@ Description of the project could be found [here](https://github.com/yanazdravkov
 The current repository contains the refactored Compression Part from [the Huffman Algorithm Project](https://github.com/yanazdravkova/Huffman-Algorithm)
 
 
+Some possible improvements for the future:
+
+* Print of Huffman tree in more beautiful format
+* Refactoring the decompresseion part
+* Unit tests
+
 
