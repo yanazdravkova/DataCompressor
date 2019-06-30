@@ -9,8 +9,8 @@ The current repository contains the refactored Compression Part from [the Huffma
 
 Some possible improvements for the future:
 
-* Print of Huffman tree in more beautiful format
-* Refactoring the decompression part
-* Unit tests
+* Refactor the decompression part
+* Print Huffman tree in a more beautiful format
+* Unit tests (catch, doctest framework)
 
 
