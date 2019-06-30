@@ -10,7 +10,7 @@ The current repository contains the refactored Compression Part from [the Huffma
 Some possible improvements for the future:
 
 * Print of Huffman tree in more beautiful format
-* Refactoring the decompresseion part
+* Refactoring the decompression part
 * Unit tests
 
 
