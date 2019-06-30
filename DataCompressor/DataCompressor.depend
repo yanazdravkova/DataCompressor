@@ -3,11 +3,11 @@
 	"iostream"
 	"CodingTable.h"
 
-1561838018 source:d:\repos\datacompressor\datacompressor\compressor.cpp
+1561842942 source:d:\repos\datacompressor\datacompressor\compressor.cpp
 	"iostream"
 	"Compressor.h"
 
-1561840347 source:d:\repos\datacompressor\datacompressor\main.cpp
+1561890756 source:d:\repos\datacompressor\datacompressor\main.cpp
 	"iostream"
 	"Tree.h"
 	"CodingTable.h"
