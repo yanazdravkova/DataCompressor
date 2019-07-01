@@ -6,14 +6,15 @@
 #include "Constants.h"
 
 #define CATCH_CONFIG_MAIN
-#include "catch.hpp"
+#include "UnitTests/catch.hpp"
 
 /// To run tests:
 ///
-/// Include file Test.cpp in the project
-/// Uncomment the 2 lines above
-/// Comment everything below
-/// Run the project
+/// Include files Test.cpp and catch.hpp
+/// from UnitTests folder in the project.
+/// Uncomment the 2 lines above.
+/// Comment everything below.
+/// Run the project.
 
 /*
 using namespace std;
