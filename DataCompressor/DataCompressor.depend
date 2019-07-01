@@ -7,13 +7,14 @@
 	"iostream"
 	"Compressor.h"
 
-1562012724 source:d:\repos\datacompressor\datacompressor\main.cpp
+1562012917 source:d:\repos\datacompressor\datacompressor\main.cpp
 	"iostream"
 	"Tree.h"
 	"CodingTable.h"
 	"Compressor.h"
 	"FrequencyTable.h"
 	"Constants.h"
+	"UnitTests/catch.hpp"
 
 1561840273 source:d:\repos\datacompressor\datacompressor\frequencytable.cpp
 	"iostream"
@@ -24,7 +25,7 @@
 	"iostream"
 	"unordered_map"
 
-1561840326 source:d:\repos\datacompressor\datacompressor\tree.cpp
+1562018470 source:d:\repos\datacompressor\datacompressor\tree.cpp
 	"algorithm"
 	"iostream"
 	"iomanip"
@@ -33,7 +34,7 @@
 	"set"
 	"Tree.h"
 
-1561840435 d:\repos\datacompressor\datacompressor\tree.h
+1562017125 d:\repos\datacompressor\datacompressor\tree.h
 	"iostream"
 	"iomanip"
 	"fstream"
