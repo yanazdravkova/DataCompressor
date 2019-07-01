@@ -3,14 +3,27 @@
 #include "CodingTable.h"
 #include "Compressor.h"
 #include "FrequencyTable.h"
+#include "Constants.h"
 
+#define CATCH_CONFIG_MAIN
+#include "catch.hpp"
+
+/// To run tests:
+///
+/// Include file Test.cpp in the project
+/// Uncomment the 2 lines above
+/// Comment everything below
+/// Run the project
+
+/*
 using namespace std;
 
 int main()
 {
-    Compressor compressor("input.txt");
+    Compressor compressor(INPUT_FILE_NAME);
     compressor.calculateCodmpressedCode();
-    compressor.saveInFile("output.txt");
+    compressor.saveInFile(OUTPUT_FILE_NAME);
 
     return 0;
 }
+*/
