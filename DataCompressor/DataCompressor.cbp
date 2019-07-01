@@ -36,12 +36,13 @@
 		<Unit filename="CodingTable.h" />
 		<Unit filename="Compressor.cpp" />
 		<Unit filename="Compressor.h" />
+		<Unit filename="Constants.h" />
 		<Unit filename="FrequencyTable.cpp" />
 		<Unit filename="FrequencyTable.h" />
-		<Unit filename="Tests.cpp" />
 		<Unit filename="Tree.cpp" />
 		<Unit filename="Tree.h" />
-		<Unit filename="catch.hpp" />
+		<Unit filename="UnitTests/Tests.cpp" />
+		<Unit filename="UnitTests/catch.hpp" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />

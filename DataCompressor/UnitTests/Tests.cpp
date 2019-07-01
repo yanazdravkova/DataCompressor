@@ -95,7 +95,22 @@ TEST_CASE("GetLeaves_OnValidEmptyTree_ReturnsListOfChars", "[tree]")
     REQUIRE(leaves == expectedResult);
 }
 
-TEST_CASE("CalculateCompressedCode_OnSimpleText_ReturnsStringInBinary", "[compressor]"){
+TEST_CASE("", "[coding table]")
+{
+    Tree tree = Tree(make_pair(' ', 1),
+                     Tree(make_pair('B', 2), Tree(), Tree()),
+                     Tree(make_pair(' ', 3), Tree(),
+                          Tree(make_pair('D', 4), Tree(), Tree())));
+
+    CodingTable codingTable(tree);
+    unordered_map<char, string> codingTableData = codingTable.getData();
+
+    REQUIRE( codingTableData.at('B') == "0" );
+    REQUIRE( codingTableData.at('D') == "11" );
+}
+
+TEST_CASE("CalculateCompressedCode_OnSimpleText_ReturnsStringInBinary", "[compressor]")
+{
     Compressor compressor(INPUT_FILE_NAME);
     string expectedResult = "01111001100011010111100";
 
