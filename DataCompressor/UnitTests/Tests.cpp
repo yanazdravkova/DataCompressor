@@ -81,7 +81,7 @@ TEST_CASE("CreateFromFrequencyTable_ValidFrequencyTable_GeneratedNonEmptyTree", 
     REQUIRE( filledTree.isEmpty() == false);
 }
 
-TEST_CASE("GetLeaves_OnNonEmptyTree_ReturnsListOfChars", "[tree]")
+TEST_CASE("GetLeaves_OnValidEmptyTree_ReturnsListOfChars", "[tree]")
 {
     Tree tree = Tree(make_pair(' ', 1),
                      Tree(make_pair('B', 2), Tree(), Tree()),
@@ -93,4 +93,13 @@ TEST_CASE("GetLeaves_OnNonEmptyTree_ReturnsListOfChars", "[tree]")
     tree.getLeaves(leaves);
 
     REQUIRE(leaves == expectedResult);
+}
+
+TEST_CASE("CalculateCompressedCode_OnSimpleText_ReturnsStringInBinary", "[compressor]"){
+    Compressor compressor(INPUT_FILE_NAME);
+    string expectedResult = "01111001100011010111100";
+
+    string calculatedCompressedCode = compressor.calculateCodmpressedCode();
+
+    REQUIRE(calculatedCompressedCode == expectedResult);
 }
