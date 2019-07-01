@@ -23,11 +23,11 @@ TEST_CASE( "FillInFromFile_WithExistingFile_ReturnsFilledTable", "[frequency tab
     frequencyTable.fillInFromFile(INPUT_FILE_NAME);
     unordered_map<char, int> frequencyTableData = frequencyTable.getData();
 
-    REQUIRE( frequencyTableData.at('D') == 1 );
-    REQUIRE( frequencyTableData.at('C') == 1 );
-    REQUIRE( frequencyTableData.at('R') == 2 );
-    REQUIRE( frequencyTableData.at('B') == 2 );
-    REQUIRE( frequencyTableData.at('A') == 5 );
+    CHECK( frequencyTableData.at('D') == 1 );
+    CHECK( frequencyTableData.at('C') == 1 );
+    CHECK( frequencyTableData.at('R') == 2 );
+    CHECK( frequencyTableData.at('B') == 3 );
+    CHECK( frequencyTableData.at('A') == 5 );
 }
 
 TEST_CASE("TreeParameterConstructor_WithValidRootAndEmptySubtrees_TreeConstructed", "[tree]")
@@ -95,7 +95,7 @@ TEST_CASE("GetLeaves_OnValidEmptyTree_ReturnsListOfChars", "[tree]")
     REQUIRE(leaves == expectedResult);
 }
 
-TEST_CASE("", "[coding table]")
+TEST_CASE("CodingTableParameterConstructor_WithValidTree_TableConstructed", "[coding table]")
 {
     Tree tree = Tree(make_pair(' ', 1),
                      Tree(make_pair('B', 2), Tree(), Tree()),
@@ -105,8 +105,8 @@ TEST_CASE("", "[coding table]")
     CodingTable codingTable(tree);
     unordered_map<char, string> codingTableData = codingTable.getData();
 
-    REQUIRE( codingTableData.at('B') == "0" );
-    REQUIRE( codingTableData.at('D') == "11" );
+    CHECK( codingTableData.at('B') == "0" );
+    CHECK( codingTableData.at('D') == "11" );
 }
 
 TEST_CASE("CalculateCompressedCode_OnSimpleText_ReturnsStringInBinary", "[compressor]")
