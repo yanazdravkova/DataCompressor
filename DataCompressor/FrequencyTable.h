@@ -17,27 +17,27 @@ private:
     unordered_map<char, int> data;
 
 public:
-    /// @brief default constructor
+    /// @brief Default constructor
     FrequencyTable():data() {}
 
-    /// @brief copy constructor
+    /// @brief Copy constructor
     FrequencyTable(unordered_map<char, int> _data): data(_data) {}
 
-    /// @brief access the content of the table
+    /// @brief Access the content of the table
     unordered_map<char, int> getData() const;
 
-    /// @brief generate frequency of occurrences
-    /// @details calculate and save in the table
+    /// @brief Generate frequency of occurrences
+    /// @details Calculate and save in the table
     /// the frequency weight of every symbol in the input
     /// @param inputFileName name of the file where the data to be compressed is stored
     /// @return void
     void fillInFromFile(string inputFileName);
 
-    ///@brief check if the table is empty
-    ///@return boolean value representing whether the table is empty
+    ///@brief Check if the table is empty
+    ///@return Boolean value representing whether the table is empty
     bool isEmpty() const;
 
-    ///@brief print the table data on the console
+    ///@brief Print the table data on the console
     void print();
 
 };
