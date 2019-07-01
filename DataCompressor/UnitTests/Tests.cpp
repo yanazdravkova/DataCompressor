@@ -81,3 +81,16 @@ TEST_CASE("CreateFromFrequencyTable_ValidFrequencyTable_GeneratedNonEmptyTree", 
     REQUIRE( filledTree.isEmpty() == false);
 }
 
+TEST_CASE("GetLeaves_OnNonEmptyTree_ReturnsListOfChars", "[tree]")
+{
+    Tree tree = Tree(make_pair(' ', 1),
+                     Tree(make_pair('B', 2), Tree(), Tree()),
+                     Tree(make_pair(' ', 3), Tree(),
+                          Tree(make_pair('D', 4), Tree(), Tree())));
+    list<char> expectedResult ({'D','B'});
+    list<char>leaves;
+
+    tree.getLeaves(leaves);
+
+    REQUIRE(leaves == expectedResult);
+}
