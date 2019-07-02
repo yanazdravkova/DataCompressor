@@ -1,0 +1,310 @@
+\hypertarget{class_tree}{}\section{Tree Class Reference}
+\label{class_tree}\index{Tree@{Tree}}
+
+
+Class to represent Huffman tree.  
+
+
+
+
+{\ttfamily \#include $<$Tree.\+h$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_tree_1_1_position}{Position}}
+\begin{DoxyCompactList}\small\item\em Class for iteration over the tree. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tree_ad376a7c639d857312f5de2ef47482f68}\label{class_tree_ad376a7c639d857312f5de2ef47482f68}} 
+\mbox{\hyperlink{class_tree_ad376a7c639d857312f5de2ef47482f68}{Tree}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_tree_a29cca0965aba0338ff53f2cfc20c5e76}{Tree}} (const pair$<$ char, int $>$ \&data, \mbox{\hyperlink{class_tree}{Tree}} left, \mbox{\hyperlink{class_tree}{Tree}} right)
+\begin{DoxyCompactList}\small\item\em Parameter constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_tree_aa038ecb4a7ccb6de5c55962ca2e2f2f6}{Tree}} (\mbox{\hyperlink{class_tree}{Tree}} \&\&other) noexcept
+\begin{DoxyCompactList}\small\item\em Move constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_tree_a8c22d028f94cbad27f3b96a336b2449c}{Tree}} (\mbox{\hyperlink{class_tree}{Tree}} const \&other)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_tree}{Tree}} \& \mbox{\hyperlink{class_tree_aaeb1ef0af85ad2c40d332b156583653f}{operator=}} (\mbox{\hyperlink{class_tree}{Tree}} other)
+\begin{DoxyCompactList}\small\item\em Operator= overload redirect root pointer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_tree_abdc38545cf3f588725b5d8b8075b3866}\label{class_tree_abdc38545cf3f588725b5d8b8075b3866}} 
+\mbox{\hyperlink{class_tree_abdc38545cf3f588725b5d8b8075b3866}{$\sim$\+Tree}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_tree}{Tree}} \mbox{\hyperlink{class_tree_a768a4e55608dd9e86a21801de9047128}{get\+Left\+Subtree}} () const
+\begin{DoxyCompactList}\small\item\em Get left subtree of the current tree. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_tree}{Tree}} \mbox{\hyperlink{class_tree_a497e24d0d17e19918a50146ad5f8bf03}{get\+Right\+Subtree}} () const
+\begin{DoxyCompactList}\small\item\em Get right subtree of the current tree. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{class_tree_aa555328592d942644e3046094dfcb15c}{get\+Root\+Character}} () const
+\begin{DoxyCompactList}\small\item\em Get root character value. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_tree_afddbbbdd7a2b6b94c1fa06421dc3659a}{get\+Root\+Number}} () const
+\begin{DoxyCompactList}\small\item\em Get root number value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_tree_ae8d23cf626ec0c79da63d50407027127}{get\+Leaves}} (list$<$ char $>$ \&leaves) const
+\begin{DoxyCompactList}\small\item\em Generate list of char values saved in the leaves of the tree. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_tree_a555c9f251517225769a022db5987ef47}{is\+Empty}} () const
+\begin{DoxyCompactList}\small\item\em Check if the tree is empty. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_tree_aa1109a75294849e0560ff762b5564f64}{is\+Character\+Member}} (const char c) const
+\begin{DoxyCompactList}\small\item\em Check if the tree contains a character. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_tree}{Tree}} $\ast$\& \mbox{\hyperlink{class_tree_a7bac2fabb211e80df087763da187d3f6}{find\+Tree\+With\+Min\+Root\+Number}} (list$<$ \mbox{\hyperlink{class_tree}{Tree}} $\ast$ $>$ \&nodes)
+\begin{DoxyCompactList}\small\item\em Find tree with the minimum number value in the root among a list of trees. \end{DoxyCompactList}\item 
+list$<$ \mbox{\hyperlink{class_tree}{Tree}} $\ast$ $>$ \mbox{\hyperlink{class_tree_a64d7bc9c77c95100c84b708fac936820}{create\+Forest\+From\+Frequency\+Table}} (\mbox{\hyperlink{class_frequency_table}{Frequency\+Table}} \&frequency\+Table) const
+\begin{DoxyCompactList}\small\item\em Create List of Trees consisting of only one vertex -\/ a certain value from a frequency table. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_tree}{Tree}} \mbox{\hyperlink{class_tree_a57608dabdd310f0c412c5d2a03faa9c0}{create\+From\+Frequency\+Table}} (\mbox{\hyperlink{class_frequency_table}{Frequency\+Table}} \&frequency\+Table)
+\begin{DoxyCompactList}\small\item\em Create tree based on frequency table. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_tree_a06a149462a8abcc4e548c1f0e3561ee7}\label{class_tree_a06a149462a8abcc4e548c1f0e3561ee7}} 
+void \mbox{\hyperlink{class_tree_a06a149462a8abcc4e548c1f0e3561ee7}{print}} (ostream \&out=cout, int current\+Height=0) const
+\begin{DoxyCompactList}\small\item\em Print the table data on the console. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_tree_aa62007059bd76aa204028499f4ad264c}{save\+In\+File}} (string output\+File\+Name) const
+\begin{DoxyCompactList}\small\item\em Save tree into file. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_tree_a618967f14a6a47aa54c13b5a0596b8de}\label{class_tree_a618967f14a6a47aa54c13b5a0596b8de}} 
+\mbox{\hyperlink{class_tree_1_1_position}{Position}} {\bfseries get\+Root} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Class to represent Huffman tree. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_tree_a29cca0965aba0338ff53f2cfc20c5e76}\label{class_tree_a29cca0965aba0338ff53f2cfc20c5e76}} 
+\index{Tree@{Tree}!Tree@{Tree}}
+\index{Tree@{Tree}!Tree@{Tree}}
+\subsubsection{\texorpdfstring{Tree()}{Tree()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Tree\+::\+Tree (\begin{DoxyParamCaption}\item[{const pair$<$ char, int $>$ \&}]{data,  }\item[{\mbox{\hyperlink{class_tree}{Tree}}}]{left,  }\item[{\mbox{\hyperlink{class_tree}{Tree}}}]{right }\end{DoxyParamCaption})}
+
+
+
+Parameter constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Root value \\
+\hline
+{\em left} & Left tree object \\
+\hline
+{\em left} & Right tree object \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_tree_aa038ecb4a7ccb6de5c55962ca2e2f2f6}\label{class_tree_aa038ecb4a7ccb6de5c55962ca2e2f2f6}} 
+\index{Tree@{Tree}!Tree@{Tree}}
+\index{Tree@{Tree}!Tree@{Tree}}
+\subsubsection{\texorpdfstring{Tree()}{Tree()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Tree\+::\+Tree (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_tree}{Tree}} \&\&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Move constructor. 
+
+New object tree is not created but it rather steals resources of other object 
+\begin{DoxyParams}{Parameters}
+{\em other} & \mbox{\hyperlink{class_tree}{Tree}} object which resource to steal \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_tree_a8c22d028f94cbad27f3b96a336b2449c}\label{class_tree_a8c22d028f94cbad27f3b96a336b2449c}} 
+\index{Tree@{Tree}!Tree@{Tree}}
+\index{Tree@{Tree}!Tree@{Tree}}
+\subsubsection{\texorpdfstring{Tree()}{Tree()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Tree\+::\+Tree (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_tree}{Tree}} const \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Copy constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \mbox{\hyperlink{class_tree}{Tree}} object to be copied \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_tree_a64d7bc9c77c95100c84b708fac936820}\label{class_tree_a64d7bc9c77c95100c84b708fac936820}} 
+\index{Tree@{Tree}!createForestFromFrequencyTable@{createForestFromFrequencyTable}}
+\index{createForestFromFrequencyTable@{createForestFromFrequencyTable}!Tree@{Tree}}
+\subsubsection{\texorpdfstring{createForestFromFrequencyTable()}{createForestFromFrequencyTable()}}
+{\footnotesize\ttfamily list$<$ \mbox{\hyperlink{class_tree}{Tree}} $\ast$ $>$ Tree\+::create\+Forest\+From\+Frequency\+Table (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_frequency_table}{Frequency\+Table}} \&}]{frequency\+Table }\end{DoxyParamCaption}) const}
+
+
+
+Create List of Trees consisting of only one vertex -\/ a certain value from a frequency table. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Frequency\+Table\&} & frequency\+Table from which to take values for tree root data \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+List of pointers to tree objects consisting of root only 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tree_a57608dabdd310f0c412c5d2a03faa9c0}\label{class_tree_a57608dabdd310f0c412c5d2a03faa9c0}} 
+\index{Tree@{Tree}!createFromFrequencyTable@{createFromFrequencyTable}}
+\index{createFromFrequencyTable@{createFromFrequencyTable}!Tree@{Tree}}
+\subsubsection{\texorpdfstring{createFromFrequencyTable()}{createFromFrequencyTable()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_tree}{Tree}} Tree\+::create\+From\+Frequency\+Table (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_frequency_table}{Frequency\+Table}} \&}]{frequency\+Table }\end{DoxyParamCaption})}
+
+
+
+Create tree based on frequency table. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Frequency\+Table\&} & frequency\+Table containing characters and their frequency weight \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+new \mbox{\hyperlink{class_tree}{Tree}} filled with node values 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tree_a7bac2fabb211e80df087763da187d3f6}\label{class_tree_a7bac2fabb211e80df087763da187d3f6}} 
+\index{Tree@{Tree}!findTreeWithMinRootNumber@{findTreeWithMinRootNumber}}
+\index{findTreeWithMinRootNumber@{findTreeWithMinRootNumber}!Tree@{Tree}}
+\subsubsection{\texorpdfstring{findTreeWithMinRootNumber()}{findTreeWithMinRootNumber()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_tree}{Tree}} $\ast$\& Tree\+::find\+Tree\+With\+Min\+Root\+Number (\begin{DoxyParamCaption}\item[{list$<$ \mbox{\hyperlink{class_tree}{Tree}} $\ast$ $>$ \&}]{nodes }\end{DoxyParamCaption})}
+
+
+
+Find tree with the minimum number value in the root among a list of trees. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list$<$\+Tree$\ast$$>$\&} & nodes List of pointer to trees among which to search for the minimum compared by root number value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the tree with the minimum root value 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tree_ae8d23cf626ec0c79da63d50407027127}\label{class_tree_ae8d23cf626ec0c79da63d50407027127}} 
+\index{Tree@{Tree}!getLeaves@{getLeaves}}
+\index{getLeaves@{getLeaves}!Tree@{Tree}}
+\subsubsection{\texorpdfstring{getLeaves()}{getLeaves()}}
+{\footnotesize\ttfamily void Tree\+::get\+Leaves (\begin{DoxyParamCaption}\item[{list$<$ char $>$ \&}]{leaves }\end{DoxyParamCaption}) const}
+
+
+
+Generate list of char values saved in the leaves of the tree. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list$<$char$>$\&} & leaves where to save the leaves char values \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_tree_a768a4e55608dd9e86a21801de9047128}\label{class_tree_a768a4e55608dd9e86a21801de9047128}} 
+\index{Tree@{Tree}!getLeftSubtree@{getLeftSubtree}}
+\index{getLeftSubtree@{getLeftSubtree}!Tree@{Tree}}
+\subsubsection{\texorpdfstring{getLeftSubtree()}{getLeftSubtree()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_tree}{Tree}} Tree\+::get\+Left\+Subtree (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get left subtree of the current tree. 
+
+\begin{DoxyReturn}{Returns}
+new \mbox{\hyperlink{class_tree}{Tree}} -\/ copy of the left subtree 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tree_a497e24d0d17e19918a50146ad5f8bf03}\label{class_tree_a497e24d0d17e19918a50146ad5f8bf03}} 
+\index{Tree@{Tree}!getRightSubtree@{getRightSubtree}}
+\index{getRightSubtree@{getRightSubtree}!Tree@{Tree}}
+\subsubsection{\texorpdfstring{getRightSubtree()}{getRightSubtree()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_tree}{Tree}} Tree\+::get\+Right\+Subtree (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get right subtree of the current tree. 
+
+\begin{DoxyReturn}{Returns}
+new \mbox{\hyperlink{class_tree}{Tree}} -\/ copy of the right subtree 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tree_aa555328592d942644e3046094dfcb15c}\label{class_tree_aa555328592d942644e3046094dfcb15c}} 
+\index{Tree@{Tree}!getRootCharacter@{getRootCharacter}}
+\index{getRootCharacter@{getRootCharacter}!Tree@{Tree}}
+\subsubsection{\texorpdfstring{getRootCharacter()}{getRootCharacter()}}
+{\footnotesize\ttfamily char Tree\+::get\+Root\+Character (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get root character value. 
+
+\begin{DoxyReturn}{Returns}
+root char value 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tree_afddbbbdd7a2b6b94c1fa06421dc3659a}\label{class_tree_afddbbbdd7a2b6b94c1fa06421dc3659a}} 
+\index{Tree@{Tree}!getRootNumber@{getRootNumber}}
+\index{getRootNumber@{getRootNumber}!Tree@{Tree}}
+\subsubsection{\texorpdfstring{getRootNumber()}{getRootNumber()}}
+{\footnotesize\ttfamily int Tree\+::get\+Root\+Number (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get root number value. 
+
+\begin{DoxyReturn}{Returns}
+root number value 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tree_aa1109a75294849e0560ff762b5564f64}\label{class_tree_aa1109a75294849e0560ff762b5564f64}} 
+\index{Tree@{Tree}!isCharacterMember@{isCharacterMember}}
+\index{isCharacterMember@{isCharacterMember}!Tree@{Tree}}
+\subsubsection{\texorpdfstring{isCharacterMember()}{isCharacterMember()}}
+{\footnotesize\ttfamily bool Tree\+::is\+Character\+Member (\begin{DoxyParamCaption}\item[{const char}]{c }\end{DoxyParamCaption}) const}
+
+
+
+Check if the tree contains a character. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em const} & char c The character to be checked for \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Boolean value representing whether the character is a member 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tree_a555c9f251517225769a022db5987ef47}\label{class_tree_a555c9f251517225769a022db5987ef47}} 
+\index{Tree@{Tree}!isEmpty@{isEmpty}}
+\index{isEmpty@{isEmpty}!Tree@{Tree}}
+\subsubsection{\texorpdfstring{isEmpty()}{isEmpty()}}
+{\footnotesize\ttfamily bool Tree\+::is\+Empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Check if the tree is empty. 
+
+\begin{DoxyReturn}{Returns}
+Boolean value representing whether the tree is empty 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tree_aaeb1ef0af85ad2c40d332b156583653f}\label{class_tree_aaeb1ef0af85ad2c40d332b156583653f}} 
+\index{Tree@{Tree}!operator=@{operator=}}
+\index{operator=@{operator=}!Tree@{Tree}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_tree}{Tree}} \& Tree\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_tree}{Tree}}}]{other }\end{DoxyParamCaption})}
+
+
+
+Operator= overload redirect root pointer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & \mbox{\hyperlink{class_tree}{Tree}} object to which the current root is going to point \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to already existing tree object 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tree_aa62007059bd76aa204028499f4ad264c}\label{class_tree_aa62007059bd76aa204028499f4ad264c}} 
+\index{Tree@{Tree}!saveInFile@{saveInFile}}
+\index{saveInFile@{saveInFile}!Tree@{Tree}}
+\subsubsection{\texorpdfstring{saveInFile()}{saveInFile()}}
+{\footnotesize\ttfamily void Tree\+::save\+In\+File (\begin{DoxyParamCaption}\item[{string}]{output\+File\+Name }\end{DoxyParamCaption}) const}
+
+
+
+Save tree into file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & output\+File\+Name file to save to \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+R\+E\+P\+O\+S/\+Data\+Compressor/\+Data\+Compressor/Tree.\+h\item 
+D\+:/\+R\+E\+P\+O\+S/\+Data\+Compressor/\+Data\+Compressor/Tree.\+cpp\end{DoxyCompactItemize}

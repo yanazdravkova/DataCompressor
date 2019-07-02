@@ -1,0 +1,131 @@
+\hypertarget{struct_node}{}\section{Node Struct Reference}
+\label{struct_node}\index{Node@{Node}}
+
+
+Structure representing node in a tree.  
+
+
+
+
+{\ttfamily \#include $<$Tree.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_node_ad7a34779cad45d997bfd6d3d8043c75f}\label{struct_node_ad7a34779cad45d997bfd6d3d8043c75f}} 
+\mbox{\hyperlink{struct_node_ad7a34779cad45d997bfd6d3d8043c75f}{Node}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_node_aa039ff01cadc09c47e6e29ded1909172}{Node}} (const pair$<$ char, int $>$ \&\mbox{\hyperlink{struct_node_aaa1c70b22c4bea8ee8d05294b244c9c5}{data}}, \mbox{\hyperlink{struct_node}{Node}} $\ast$\mbox{\hyperlink{struct_node_ab8c667ac8fdb120ed4c031682a9cdaee}{left}}=nullptr, \mbox{\hyperlink{struct_node}{Node}} $\ast$\mbox{\hyperlink{struct_node_a7328862eaa6dea28018326549b3294d3}{right}}=nullptr)
+\begin{DoxyCompactList}\small\item\em Parameter constructor. \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{struct_node_a5af2a6db15b8190ed18b7c608784f050}{get\+Character}} ()
+\begin{DoxyCompactList}\small\item\em Access character saved in the node. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{struct_node_a7fd57dccb57f67113c2894d0d52da537}{get\+Number}} ()
+\begin{DoxyCompactList}\small\item\em Access number saved in the node. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_node}{Node}} $\ast$ \mbox{\hyperlink{struct_node_a8557bfd8ff3979e326611dd919f1987d}{copy}} ()
+\begin{DoxyCompactList}\small\item\em Copy node. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+pair$<$ char, int $>$ \mbox{\hyperlink{struct_node_aaa1c70b22c4bea8ee8d05294b244c9c5}{data}}
+\begin{DoxyCompactList}\small\item\em Pair of character and number saved in each node. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_node_ab8c667ac8fdb120ed4c031682a9cdaee}\label{struct_node_ab8c667ac8fdb120ed4c031682a9cdaee}} 
+\mbox{\hyperlink{struct_node}{Node}} $\ast$ \mbox{\hyperlink{struct_node_ab8c667ac8fdb120ed4c031682a9cdaee}{left}}
+\begin{DoxyCompactList}\small\item\em Pointer to the left node. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_node_a7328862eaa6dea28018326549b3294d3}\label{struct_node_a7328862eaa6dea28018326549b3294d3}} 
+\mbox{\hyperlink{struct_node}{Node}} $\ast$ \mbox{\hyperlink{struct_node_a7328862eaa6dea28018326549b3294d3}{right}}
+\begin{DoxyCompactList}\small\item\em Pointer to the right node. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Structure representing node in a tree. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{struct_node_aa039ff01cadc09c47e6e29ded1909172}\label{struct_node_aa039ff01cadc09c47e6e29ded1909172}} 
+\index{Node@{Node}!Node@{Node}}
+\index{Node@{Node}!Node@{Node}}
+\subsubsection{\texorpdfstring{Node()}{Node()}}
+{\footnotesize\ttfamily Node\+::\+Node (\begin{DoxyParamCaption}\item[{const pair$<$ char, int $>$ \&}]{data,  }\item[{\mbox{\hyperlink{struct_node}{Node}} $\ast$}]{left = {\ttfamily nullptr},  }\item[{\mbox{\hyperlink{struct_node}{Node}} $\ast$}]{right = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Parameter constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Value saved in the node \\
+\hline
+{\em left} & Pointer to the left node \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+default value nullptr 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em right} & Pointer to the right node \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+default value nullptr 
+\end{DoxyNote}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{struct_node_a8557bfd8ff3979e326611dd919f1987d}\label{struct_node_a8557bfd8ff3979e326611dd919f1987d}} 
+\index{Node@{Node}!copy@{copy}}
+\index{copy@{copy}!Node@{Node}}
+\subsubsection{\texorpdfstring{copy()}{copy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_node}{Node}} $\ast$ Node\+::copy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Copy node. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to a new node identical to the current one 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_node_a5af2a6db15b8190ed18b7c608784f050}\label{struct_node_a5af2a6db15b8190ed18b7c608784f050}} 
+\index{Node@{Node}!getCharacter@{getCharacter}}
+\index{getCharacter@{getCharacter}!Node@{Node}}
+\subsubsection{\texorpdfstring{getCharacter()}{getCharacter()}}
+{\footnotesize\ttfamily char Node\+::get\+Character (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Access character saved in the node. 
+
+\begin{DoxyReturn}{Returns}
+Character saved in the node 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_node_a7fd57dccb57f67113c2894d0d52da537}\label{struct_node_a7fd57dccb57f67113c2894d0d52da537}} 
+\index{Node@{Node}!getNumber@{getNumber}}
+\index{getNumber@{getNumber}!Node@{Node}}
+\subsubsection{\texorpdfstring{getNumber()}{getNumber()}}
+{\footnotesize\ttfamily int Node\+::get\+Number (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Access number saved in the node. 
+
+\begin{DoxyReturn}{Returns}
+Number saved in the node 
+\end{DoxyReturn}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{struct_node_aaa1c70b22c4bea8ee8d05294b244c9c5}\label{struct_node_aaa1c70b22c4bea8ee8d05294b244c9c5}} 
+\index{Node@{Node}!data@{data}}
+\index{data@{data}!Node@{Node}}
+\subsubsection{\texorpdfstring{data}{data}}
+{\footnotesize\ttfamily pair$<$char,int$>$ Node\+::data}
+
+
+
+Pair of character and number saved in each node. 
+
+For nodes without letter as a character the empty char is saved instead 
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+R\+E\+P\+O\+S/\+Data\+Compressor/\+Data\+Compressor/Tree.\+h\item 
+D\+:/\+R\+E\+P\+O\+S/\+Data\+Compressor/\+Data\+Compressor/Tree.\+cpp\end{DoxyCompactItemize}

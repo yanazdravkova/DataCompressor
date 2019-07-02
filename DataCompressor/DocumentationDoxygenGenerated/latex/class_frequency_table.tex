@@ -1,0 +1,89 @@
+\hypertarget{class_frequency_table}{}\section{Frequency\+Table Class Reference}
+\label{class_frequency_table}\index{FrequencyTable@{FrequencyTable}}
+
+
+Abstraction for Frequency table.  
+
+
+
+
+{\ttfamily \#include $<$Frequency\+Table.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_frequency_table_aa65fd27208994174a3ff6c692fe51ddb}\label{class_frequency_table_aa65fd27208994174a3ff6c692fe51ddb}} 
+\mbox{\hyperlink{class_frequency_table_aa65fd27208994174a3ff6c692fe51ddb}{Frequency\+Table}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_frequency_table_a7017bb4b9594bb6a8ad9ee5d969d0bd8}\label{class_frequency_table_a7017bb4b9594bb6a8ad9ee5d969d0bd8}} 
+\mbox{\hyperlink{class_frequency_table_a7017bb4b9594bb6a8ad9ee5d969d0bd8}{Frequency\+Table}} (unordered\+\_\+map$<$ char, int $>$ \+\_\+data)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+unordered\+\_\+map$<$ char, int $>$ \mbox{\hyperlink{class_frequency_table_a02fd0379aafe9f2028637b86ed8301e8}{get\+Data}} () const
+\begin{DoxyCompactList}\small\item\em Get the content of the table. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_frequency_table_ad556d8ff9846ff76eb3cce00d69ea67a}{fill\+In\+From\+File}} (string input\+File\+Name)
+\begin{DoxyCompactList}\small\item\em Generate frequency of occurrences. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_frequency_table_ab7a061dda60815f087bd2ccf41a2917f}{is\+Empty}} () const
+\begin{DoxyCompactList}\small\item\em Check if the table is empty. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_frequency_table_a35974984c9ef4e7ef69c14a247179164}\label{class_frequency_table_a35974984c9ef4e7ef69c14a247179164}} 
+void \mbox{\hyperlink{class_frequency_table_a35974984c9ef4e7ef69c14a247179164}{print}} ()
+\begin{DoxyCompactList}\small\item\em Print the table data on the console. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Abstraction for Frequency table. 
+
+class \mbox{\hyperlink{class_frequency_table}{Frequency\+Table}}
+
+The class provides representation and functionality for the frequency of occurrence for every symbol from the input. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_frequency_table_ad556d8ff9846ff76eb3cce00d69ea67a}\label{class_frequency_table_ad556d8ff9846ff76eb3cce00d69ea67a}} 
+\index{FrequencyTable@{FrequencyTable}!fillInFromFile@{fillInFromFile}}
+\index{fillInFromFile@{fillInFromFile}!FrequencyTable@{FrequencyTable}}
+\subsubsection{\texorpdfstring{fillInFromFile()}{fillInFromFile()}}
+{\footnotesize\ttfamily void Frequency\+Table\+::fill\+In\+From\+File (\begin{DoxyParamCaption}\item[{string}]{input\+File\+Name }\end{DoxyParamCaption})}
+
+
+
+Generate frequency of occurrences. 
+
+Calculate and save in the table the frequency weight of every symbol in the input 
+\begin{DoxyParams}{Parameters}
+{\em input\+File\+Name} & name of the file where the data to be compressed is stored \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_frequency_table_a02fd0379aafe9f2028637b86ed8301e8}\label{class_frequency_table_a02fd0379aafe9f2028637b86ed8301e8}} 
+\index{FrequencyTable@{FrequencyTable}!getData@{getData}}
+\index{getData@{getData}!FrequencyTable@{FrequencyTable}}
+\subsubsection{\texorpdfstring{getData()}{getData()}}
+{\footnotesize\ttfamily unordered\+\_\+map$<$ char, int $>$ Frequency\+Table\+::get\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the content of the table. 
+
+\begin{DoxyReturn}{Returns}
+unordered\+\_\+map of table values 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_frequency_table_ab7a061dda60815f087bd2ccf41a2917f}\label{class_frequency_table_ab7a061dda60815f087bd2ccf41a2917f}} 
+\index{FrequencyTable@{FrequencyTable}!isEmpty@{isEmpty}}
+\index{isEmpty@{isEmpty}!FrequencyTable@{FrequencyTable}}
+\subsubsection{\texorpdfstring{isEmpty()}{isEmpty()}}
+{\footnotesize\ttfamily bool Frequency\+Table\+::is\+Empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Check if the table is empty. 
+
+\begin{DoxyReturn}{Returns}
+Boolean value representing whether the table is empty 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+R\+E\+P\+O\+S/\+Data\+Compressor/\+Data\+Compressor/Frequency\+Table.\+h\item 
+D\+:/\+R\+E\+P\+O\+S/\+Data\+Compressor/\+Data\+Compressor/Frequency\+Table.\+cpp\end{DoxyCompactItemize}

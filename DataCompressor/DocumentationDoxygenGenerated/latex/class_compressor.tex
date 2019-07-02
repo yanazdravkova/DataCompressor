@@ -1,0 +1,92 @@
+\hypertarget{class_compressor}{}\section{Compressor Class Reference}
+\label{class_compressor}\index{Compressor@{Compressor}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_compressor_a8a728ed1544cc0f82e8390f4606026b0}\label{class_compressor_a8a728ed1544cc0f82e8390f4606026b0}} 
+\mbox{\hyperlink{class_compressor_a8a728ed1544cc0f82e8390f4606026b0}{Compressor}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_compressor_a10146d317f26c60beef2a6ff88cd2b37}{Compressor}} (string input\+File\+Name)
+\begin{DoxyCompactList}\small\item\em Parameter constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_compressor_a7153be4a80054c7da7b355ff6841c0f7}\label{class_compressor_a7153be4a80054c7da7b355ff6841c0f7}} 
+\mbox{\hyperlink{class_compressor_a7153be4a80054c7da7b355ff6841c0f7}{$\sim$\+Compressor}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_compressor_a604328bbf5e70b07098547890a0963d8}{calculate\+Code\+For\+Character}} (char c)
+\begin{DoxyCompactList}\small\item\em Extract binary code from coding table for a certain character. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_compressor_a1973489d6ff8cff1458e9eff8dd0e556}{calculate\+Codmpressed\+Code}} ()
+\begin{DoxyCompactList}\small\item\em Generate the final compressed code. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_compressor_a462c120db290b92e49a566ada6ba6edf}{save\+In\+File}} (string output\+File\+Name) const
+\begin{DoxyCompactList}\small\item\em Save compressed code into file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_compressor_a10146d317f26c60beef2a6ff88cd2b37}\label{class_compressor_a10146d317f26c60beef2a6ff88cd2b37}} 
+\index{Compressor@{Compressor}!Compressor@{Compressor}}
+\index{Compressor@{Compressor}!Compressor@{Compressor}}
+\subsubsection{\texorpdfstring{Compressor()}{Compressor()}}
+{\footnotesize\ttfamily Compressor\+::\+Compressor (\begin{DoxyParamCaption}\item[{string}]{input\+File\+Name }\end{DoxyParamCaption})}
+
+
+
+Parameter constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & input\+File\+Name name of the file where the data to be compressed is stored \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_compressor_a604328bbf5e70b07098547890a0963d8}\label{class_compressor_a604328bbf5e70b07098547890a0963d8}} 
+\index{Compressor@{Compressor}!calculateCodeForCharacter@{calculateCodeForCharacter}}
+\index{calculateCodeForCharacter@{calculateCodeForCharacter}!Compressor@{Compressor}}
+\subsubsection{\texorpdfstring{calculateCodeForCharacter()}{calculateCodeForCharacter()}}
+{\footnotesize\ttfamily string Compressor\+::calculate\+Code\+For\+Character (\begin{DoxyParamCaption}\item[{char}]{c }\end{DoxyParamCaption})}
+
+
+
+Extract binary code from coding table for a certain character. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em char} & c The character which code to look for \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+string of binary code for c 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_compressor_a1973489d6ff8cff1458e9eff8dd0e556}\label{class_compressor_a1973489d6ff8cff1458e9eff8dd0e556}} 
+\index{Compressor@{Compressor}!calculateCodmpressedCode@{calculateCodmpressedCode}}
+\index{calculateCodmpressedCode@{calculateCodmpressedCode}!Compressor@{Compressor}}
+\subsubsection{\texorpdfstring{calculateCodmpressedCode()}{calculateCodmpressedCode()}}
+{\footnotesize\ttfamily string Compressor\+::calculate\+Codmpressed\+Code (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Generate the final compressed code. 
+
+\begin{DoxyReturn}{Returns}
+string of compressed code in binary format 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_compressor_a462c120db290b92e49a566ada6ba6edf}\label{class_compressor_a462c120db290b92e49a566ada6ba6edf}} 
+\index{Compressor@{Compressor}!saveInFile@{saveInFile}}
+\index{saveInFile@{saveInFile}!Compressor@{Compressor}}
+\subsubsection{\texorpdfstring{saveInFile()}{saveInFile()}}
+{\footnotesize\ttfamily void Compressor\+::save\+In\+File (\begin{DoxyParamCaption}\item[{string}]{output\+File\+Name }\end{DoxyParamCaption}) const}
+
+
+
+Save compressed code into file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em string} & output\+File\+Name file to save to \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+R\+E\+P\+O\+S/\+Data\+Compressor/\+Data\+Compressor/Compressor.\+h\item 
+D\+:/\+R\+E\+P\+O\+S/\+Data\+Compressor/\+Data\+Compressor/Compressor.\+cpp\end{DoxyCompactItemize}
