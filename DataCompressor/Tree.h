@@ -92,11 +92,11 @@ public:
     Tree getRightSubtree() const;
 
     ///@brief Get root character value
-    ///@return char value
+    ///@return root char value
     char getRootCharacter() const;
 
     ///@brief Get root number value
-    ///@return int value
+    ///@return root number value
     int getRootNumber() const;
 
     ///@brief Generate list of char values saved in the leaves of the tree
