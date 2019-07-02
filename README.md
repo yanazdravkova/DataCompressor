@@ -8,13 +8,12 @@ Description of the project could be found [here](https://github.com/yanazdravkov
 
 The current repository contains the refactored Compression Part from [the Huffman Algorithm Project](https://github.com/yanazdravkova/Huffman-Algorithm)
 
+*** Unit tests included (catch framework used) - instructions in main.cpp
 
 Some possible improvements for the future:
 
 * Refactor the decompression part
 * Print Huffman tree in a more beautiful format
-
-*** Unit tests included (catch framework used)
 
 
 
