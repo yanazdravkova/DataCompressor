@@ -18,13 +18,24 @@ private:
     string calculateBinaryForChar(const char c, const Tree& start) const;
 
 public:
+    /// @brief Default constructor
     CodingTable():data() {};
+
+    /// @brief Parameter constructor
     CodingTable(unordered_map<char, string> _data): data(_data) {}
+
+    /// @brief Copy constructor
     CodingTable(Tree& tree);
 
+    /// @brief Get the content of the table
+    /// @return unordered_map of table values
     unordered_map<char, string> getData() const;
 
+    ///@brief Check if the table is empty
+    ///@return Boolean value representing whether the table is empty
     bool isEmpty() const;
+
+    ///@brief Print the table data on the console
     void print() const;
 };
 

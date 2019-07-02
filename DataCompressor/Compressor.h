@@ -16,12 +16,27 @@ private:
     string compressedCode;
 
 public:
+    /// @brief Default constructor
     Compressor():  inputFileName(""), codingTable(), compressedCode(""){}
+
+    /// @brief Parameter constructor
+    /// @param string inputFileName name of the file where the data to be compressed is stored
     Compressor(string inputFileName);
+
+    /// @brief Destructor
     ~Compressor();
 
+    /// @brief Extract binary code from coding table for a certain character
+    /// @param char c The character which code to look for
+    /// @return string of binary code for c
     string calculateCodeForCharacter(char c);
+
+    /// @brief Generate the final compressed code
+    /// @return string of compressed code in binary format
     string calculateCodmpressedCode();
+
+    ///@brief Save compressed code into file
+    ///@param string outputFileName file to save to
     void saveInFile(string outputFileName) const;
 };
 

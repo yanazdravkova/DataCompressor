@@ -23,7 +23,8 @@ public:
     /// @brief Copy constructor
     FrequencyTable(unordered_map<char, int> _data): data(_data) {}
 
-    /// @brief Access the content of the table
+    /// @brief Get the content of the table
+    /// @return unordered_map of table values
     unordered_map<char, int> getData() const;
 
     /// @brief Generate frequency of occurrences
