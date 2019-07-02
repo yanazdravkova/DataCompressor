@@ -45,7 +45,7 @@ struct Node
     Node* copy();
 };
 
-///@brief Class to represent Huffman tree
+///@brief Representation of Huffman tree
 class Tree
 {
 private:

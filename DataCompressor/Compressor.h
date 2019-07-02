@@ -8,6 +8,8 @@
 
 using namespace std;
 
+/// class Compressor
+/// @brief Worker responsible for the run of the compression
 class Compressor
 {
 private:

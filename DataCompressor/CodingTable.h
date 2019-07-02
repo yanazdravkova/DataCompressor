@@ -11,6 +11,10 @@
 
 using namespace std;
 
+/// class CodingTable
+/// @brief Abstraction for Coding table
+/// @details The class provides representation and
+/// functionality for the coding table consisting of characters from the input and their binary representations after the coding.
 class CodingTable
 {
 private:
