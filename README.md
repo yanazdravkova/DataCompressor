@@ -14,7 +14,7 @@ Some possible improvements for the future:
 * Refactor the decompression part
 * Print Huffman tree in a more beautiful format
 
-*** ADDED Unit tests (catch framework used)
+*** Unit tests included (catch framework used)
 
 
 
